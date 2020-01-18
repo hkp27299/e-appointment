@@ -37,18 +37,18 @@ class _SignUpState extends State<SignUp> {
       return null;
     }
   }
-  
+ 
 
 
   TextEditingController emailInputController;
   TextEditingController pwdInputController;
   TextEditingController confirmPwdInputController;
-  
+ 
   initState() {
     emailInputController = new TextEditingController();
     pwdInputController = new TextEditingController();
     confirmPwdInputController = new TextEditingController();
-  
+ 
     super.initState();
   }
 
@@ -89,6 +89,7 @@ class _SignUpState extends State<SignUp> {
                   obscureText: true,
                   validator: pwdValidator,
                 ),
+                
                 SizedBox(
                   height: 30,
                 ),
@@ -100,7 +101,7 @@ class _SignUpState extends State<SignUp> {
                       _regkey.currentState.save();
                       if (pwdInputController.text ==
                           confirmPwdInputController.text) {
-                        
+                            
                         FirebaseAuth.instance.createUserWithEmailAndPassword(
                             email: emailInputController.text,
                             password: pwdInputController.text);

@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('Real-Cure'),
+        title: Text('e-Appointment'),
       ),
       body: SingleChildScrollView(
         child: Column(
