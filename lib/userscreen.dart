@@ -32,8 +32,32 @@ class _UserScreenState extends State<UserScreen> {
           'otstatus': otstatus.text,
         }));
   }
-  void clearData(){
 
+  void clearData() {
+    fullname.text = "";
+    contactno.text = "";
+    bloodgroup.text = "";
+    bloodloss.text = "";
+    injuredbodyparts.text = "";
+    discription.text = "";
+    setState(() {
+      yes = false;
+      no = false;
+      _selected = null;
+    });
+  }
+
+  List<String> genders = ['Male', 'Female', 'Other'];
+  List<String> ot = ['Yes', 'No'];
+  String _selected;
+  bool yes = false;
+  bool no = false;
+  void otst() {
+    if (yes) {
+      otstatus.text = 'Yes';
+    } else {
+      otstatus.text = 'No';
+    }
   }
 
   TextEditingController fullname;
@@ -80,13 +104,33 @@ class _UserScreenState extends State<UserScreen> {
                     keyboardType: TextInputType.emailAddress,
                     validator: validator,
                   ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Gender',
-                    ),
-                    controller: gender,
-                    keyboardType: TextInputType.emailAddress,
-                    validator: validator,
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        'Gender',
+                        style:
+                            TextStyle(fontSize: 16.5, color: Colors.grey[600]),
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      DropdownButton(
+                        hint: Text('Select'), 
+                        value: _selected,
+                        onChanged: (newValue) {
+                          gender.text = newValue;
+                          setState(() {
+                            _selected = newValue;
+                          });
+                        },
+                        items: genders.map((location) {
+                          return DropdownMenuItem(
+                            child: new Text(location),
+                            value: location,
+                          );
+                        }).toList(),
+                      ),
+                    ],
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -104,7 +148,7 @@ class _UserScreenState extends State<UserScreen> {
                     keyboardType: TextInputType.emailAddress,
                     validator: validator,
                   ),
-                   TextFormField(
+                  TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Blood-Group',
                     ),
@@ -120,13 +164,54 @@ class _UserScreenState extends State<UserScreen> {
                     keyboardType: TextInputType.emailAddress,
                     validator: validator,
                   ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Want to Ready OT?',
-                    ),
-                    controller: otstatus,
-                    keyboardType: TextInputType.emailAddress,
-                    validator: validator,
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        'Want to ready OT?',
+                        style:
+                            TextStyle(fontSize: 16.5, color: Colors.grey[600]),
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      /* DropdownButton(
+                        hint: Text(
+                            'Select'), // Not necessary for Option 1
+                        value: _selected1,
+                        onChanged: (newValue) {
+                          otstatus.text = newValue;
+                          setState(() {
+                            _selected1 = newValue;
+                          });
+                        },
+                        items: ot.map((location) {
+                          return DropdownMenuItem(
+                            child: new Text(location),
+                            value: location,
+                          );
+                        }).toList(),
+                      ), */
+                      Text("Yes"),
+                      Checkbox(
+                        value: yes,
+                        onChanged: (bool value) {
+                          setState(() {
+                            yes = value;
+                            otst();
+                          });
+                        },
+                      ),
+                      Text("No"),
+                      Checkbox(
+                        value: no,
+                        onChanged: (bool value) {
+                          setState(() {
+                            no = value;
+                            otst();
+                          });
+                        },
+                      ),
+                    ],
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -147,8 +232,7 @@ class _UserScreenState extends State<UserScreen> {
                       if (_regkey.currentState.validate()) {
                         _regkey.currentState.save();
                         addData();
-                      
-
+                        clearData();
                       }
                     },
                   )
