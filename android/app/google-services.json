@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "843955706772",
+    "firebase_url": "https://e-appointment-4f33a.firebaseio.com",
+    "project_id": "e-appointment-4f33a",
+    "storage_bucket": "e-appointment-4f33a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843955706772:android:896976972661a4ffadcd81",
+        "android_client_info": {
+          "package_name": "com.example.e_appointment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843955706772-tvrb9sf7k266l9ia0lc6n9r2rqo2epor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCbxWJROsJqY_xPWBY1ib3O7loMcxQSdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843955706772-tvrb9sf7k266l9ia0lc6n9r2rqo2epor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
