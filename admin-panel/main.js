@@ -53,6 +53,7 @@ db.ref('patient').on('value',
             <div class="textmain" id="bgrp">Blood Group: ${bgrp}</div>
             <div class="textmain" id="bldloss">Blood Loss: ${bldloss} %</div>
             <div class="textmain" id="bodypart">Injured Body Parts: ${bodypart}</div>
+            <div class="textmain" id="ot">Want to ready OT? : ${ot}</div>
             <div class="textmain" id="des">Description: ${des}</div>
             <button class="alertbtn" onclick="alertdoc()" id="doctoralrt"><a class="example_c" >Alert Doctor</a></button>
             <button class="alertbtn" onclick="startot()" id="otstart"><a class="example_c" >Start OT</a></button>
