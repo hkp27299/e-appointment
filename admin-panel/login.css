@@ -7,6 +7,17 @@ body {
 	background-size: cover;
 }
 
+.cardbg{
+	width: 400px;
+	height: 200px;
+	background-color: chartreuse;
+	position: absolute;
+	top: 20%;
+	right: 50%;
+	transform: translate(50%,0%);
+	border-radius: 20px;
+	box-shadow: 10px 10px 20px 5px rgba(0,0,0,0.75)
+}
 .bgopacity{
 	width: 100%;
 	height: 100%;

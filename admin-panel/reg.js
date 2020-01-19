@@ -19,6 +19,6 @@ function signup() {
     var password = document.querySelector('[name="password"]');
     const next = auth.createUserWithEmailAndPassword(email.value, password.value);
     document.querySelector('form').reset();
-    window.location("main.html");
     alert("Everyting worked.");
+
 }

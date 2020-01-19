@@ -54,8 +54,8 @@ db.ref('patient').on('value',
             <div class="textmain" id="bldloss">Blood Loss: ${bldloss} %</div>
             <div class="textmain" id="bodypart">Injured Body Parts: ${bodypart}</div>
             <div class="textmain" id="des">Description: ${des}</div>
-            <button class="alertbtn" id="doctoralrt"><a class="example_c" >Alert Doctor</a></button>
-            <button class="alertbtn" id="otstart"><a class="example_c" >Start OT</a></button>
+            <button class="alertbtn" onclick="alertdoc()" id="doctoralrt"><a class="example_c" >Alert Doctor</a></button>
+            <button class="alertbtn" onclick="startot()" id="otstart"><a class="example_c" >Start OT</a></button>
         </div>
     </div>
     <hr>`
@@ -69,6 +69,17 @@ db.ref('patient').on('value',
         //     b.setAttribute("disabled", "");
         // }
     });
+
+
+function alertdoc() {
+    let doclist = ['Dr.Rishabh', 'Dr. Solanki', 'Dr. Sachvi', 'Dr. Patel', 'Dr. Mahanta', 'Dr. Savanre'];
+    alert(" Send Message To " + doclist[Math.floor(Math.random() * doclist.length)]);
+}
+
+function startot() {
+    let otlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    alert(" Prepare Operation Theatre No. " + otlist[Math.floor(Math.random() * otlist.length)])
+}
 
 function closecard() {
     var deletecard = document.getElementById("get-card");
