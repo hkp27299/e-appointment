@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home Page</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #7F00FF;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #E100FF, #7F00FF);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .vertical {
+      border-left: 3px solid #1e272e;
+      height: 745px;
+      position: fixed;
+      left: 50%;
+      margin-top: 0px;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      border-radius: 30px;
+      position: relative;
+      left: 900px;
+      top: 150px;
+      text-align: center;
+      align-items: center;
+      justify-content: center
+    }
+
+    .button1 {
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      border-radius: 30px;
+      position: relative;
+      left: 900px;
+      top: 250px;
+      text-align: center;
+      align-items: center;
+      justify-content: center
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button1 span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button1 span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button1:hover span {
+      padding-right: 25px;
+    }
+
+    a:link {
+      position: absolute;
+      bottom: 530px;
+      left: 100px;
+      text-decoration: none;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .button1:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    img {
+      position: absolute;
+      bottom: 200px;
+      left: 150px;
+    }
+
+    p {
+      animation: color-change 3s infinite;
+      font-size: 80px;
+      margin-left: 70px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 0px;
+    }
+
+    @keyframes color-change {
+      0% {
+        color: #23408e;
+      }
+
+      50% {
+        color: #ed1b24;
+      }
+
+      100% {
+        color: #23408e;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="vertical"></div>
+  <p>e - Appointment</p>
+  <img src="img/36701.png" alt="Ambulance" height="300" width="460">
+  <a href="login.html"><button class="button"><span> Log-in </span></button></a></br></br>
+
+  <a href="Regi1.html"><button class="button1"><span> Registration </span></button></a>
+
+</body>
+
+</html>
