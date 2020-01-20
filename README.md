@@ -12,7 +12,7 @@
 - Then fill form and submit it.
 - It will show at website of hospital at admin side.
 
-#### Form Preview
+#### App Preview
 <a href="https://imgflip.com/gif/3mi72o"><img src="https://i.imgflip.com/3mi72o.gif" title="made at imgflip.com"/></a>
 <a href="https://imgflip.com/gif/3mippk"><img src="https://i.imgflip.com/3mippk.gif" title="made at imgflip.com"/></a>
 #### Admin Preview
