@@ -17,6 +17,3 @@
 <a href="https://imgflip.com/gif/3mippk"><img src="https://i.imgflip.com/3mippk.gif" title="made at imgflip.com"/></a>
 #### Admin Preview
 <a href="https://imgflip.com/gif/3mk3mt"><img src="https://i.imgflip.com/3mk3mt.gif" title="made at imgflip.com"/></a>
-
-#### For more information, please visit our website at
-https://admin-panel-dotslash.netlify.com/
